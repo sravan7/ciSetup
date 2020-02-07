@@ -17,13 +17,18 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - name: Deploy
-      uses: JamesIves/github-pages-deploy-action@master
+    - name: Install SSH Client
+    - uses: webfactory/ssh-agent@v0.2.0 # This step installs the ssh client into the workflow run. There's many options available for this on the action marketplace.
       with:
-        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        ssh-private-key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+    - name: Deploy
+      uses: JamesIves/github-pages-deploy-action@releases/v3
+      with:
         BASE_BRANCH: master
         BRANCH: gh-pages
         FOLDER: build
+        CLEAN: true
+        SSH: true
         BUILD_SCRIPT: npm install && npm run-script build
 
       env:
