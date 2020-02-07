@@ -22,7 +22,7 @@ jobs:
       run: | 
         git config --global user.email "esd14i017@iiitdm.ac.in"
         git config --global user.name "sravan7"
-        ssh -T git@github.com 
+        ssh -vT git@github.com 
         npm run deploy
       env:
         CI: true
