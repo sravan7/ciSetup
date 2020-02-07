@@ -9,7 +9,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [8.x, 10.x, 12.x]
+        node-version: [12.x]
 
     steps:
     - uses: actions/checkout@v2
@@ -22,9 +22,10 @@ jobs:
       run: | 
         git config --global user.email "esd14i017@iiitdm.ac.in"
         git config --global user.name "sravan7"
-        git remote remove origin
-        git remote add origin git@github.com:sravan7/ciSetup.git
-        ssh -vT git@github.com 
-        npm run deploy
+    -name: "deploy here"
+     run: npm run deploy
+     with:
+      github_token: ${{secrets.ACTIONS_DEPLOY_KEY}}
+      
       env:
         CI: true
