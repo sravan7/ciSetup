@@ -18,12 +18,11 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm install
-    - name: Build and Deploy
-      uses: JamesIves/github-pages-deploy-action@releases/v3
-      with:
-        SSH: true
-        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-        BRANCH: gh-pages # The branch the action should deploy to.
-        FOLDER: build # The folder the action should deploy.
+    - name: Build and Deploy stage
+      run: | 
+        git config --global user.email "esd14i017@iiitdm.ac.in"
+        git config --global user.name "sravan7"
+        ssh -T git@github.com 
+        npm run deploy
       env:
         CI: true
