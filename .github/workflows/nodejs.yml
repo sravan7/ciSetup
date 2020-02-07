@@ -26,6 +26,7 @@ jobs:
       with:
         BASE_BRANCH: master
         BRANCH: gh-pages
+        FOLDER: public
         CLEAN: true
         SSH: true
         BUILD_SCRIPT: npm install && npm run-script build
