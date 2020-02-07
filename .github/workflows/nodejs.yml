@@ -18,14 +18,18 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm install
-    - name: Build and Deploy stage
-      run: | 
-        git config --global user.email "esd14i017@iiitdm.ac.in"
-        git config --global user.name "sravan7"
-    - name: deploy here
-      run: npm run deploy
+    
+    - name: Build
+      run: |
+        npm run-script build
+
+    - name: Deploy
+      uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
-       github_token: ${{secrets.ACTIONS_DEPLOY_KEY}}
+        BASE_BRANCH: master
+        ACCESS_TOKEN: ${{secrets.ACTIONS_DEPLOY_KEY}}
+        BRANCH: gh-pages
+        FOLDER: build
 
       env:
         CI: true
