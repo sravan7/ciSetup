@@ -22,10 +22,10 @@ jobs:
       run: | 
         git config --global user.email "esd14i017@iiitdm.ac.in"
         git config --global user.name "sravan7"
-    -name: deploy here
-     run: npm run deploy
-     with:
-      github_token: ${{secrets.ACTIONS_DEPLOY_KEY}}
+    - name: deploy here
+      run: npm run deploy
+      with:
+       github_token: ${{secrets.ACTIONS_DEPLOY_KEY}}
 
       env:
         CI: true
