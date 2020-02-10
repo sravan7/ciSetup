@@ -26,7 +26,7 @@ function Input({...props}){
     return (
         <div className="loginControls">
             <MuiThemeProvider theme={theme} >
-                <TextField  {...props}  variant="outlined"  />
+                <TextField  {...props}   />
             </MuiThemeProvider>
         </div>
     ) ;

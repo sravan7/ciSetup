@@ -7,10 +7,13 @@ function Dashboard(props){
 
     return (
         <div className="dashboard">
-            <Header />
             <ExtrasSideMenu />
-            <Menu />
-            <MailBox />
+            <Header />
+            <div className="app-content">
+                <Menu />
+                <MailBox />
+            </div>
+        
         </div>
     )
 }
