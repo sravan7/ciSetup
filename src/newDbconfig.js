@@ -49,39 +49,16 @@ export const createUsers=() => {
                     }
                 }
             }
-            if(!db.objectStoreNames.contains("Messages")) {
-                if(e.target.oldVersion<2){
-                let objectStore = db.createObjectStore("Messages", {keyPath: "mid"})
-                objectStore.createIndex("fromMail","fromMail", {unique: false});
-                objectStore.createIndex("mid","mid", {unique: true});
-             
-                objectStore.transaction.oncomplete = (ev) => {
-                    console.log("transaction", ev);
-                   let messageStore= db.transaction("Messages", "readwrite").objectStore("Messages");
-                   MessagesData.forEach(function (message){
-                       messageStore.add(message);
-                       console.log("mesages completed", message)
-                   });
-                }
-            }
-        }
-        if(!db.objectStoreNames.contains("ToBox")) {
-            if(e.oldVersion<3){
-            let objectStore = db.createObjectStore("ToBox", {autoIncrement:true});
-            objectStore.createIndex("toMail","toMail", {unique: false});
-            objectStore.createIndex("mid","mid", {unique: false});
-         
-            objectStore.transaction.oncomplete = (ev) => {
-                console.log("transaction", ev);
-               let messageStore= db.transaction("ToBox", "readwrite").objectStore("ToBox");
-               ToData.forEach(function (message){
-                   messageStore.add(message);
-                   console.log(message);
-                   });
-                }
-            }
-        }
     }
+        let secondStore = initiateDB(2);
+            secondStore.onsuccess =(e)=> {
+                console.log(e, "secondStorse")
+            }
+            secondStore.onupgradeneeded = (e) => {
+                console.log(e, "upfgrade neded")
+            }
+           
+    
 }
 
 export const createMessages= () => {
