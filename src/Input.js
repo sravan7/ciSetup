@@ -7,7 +7,7 @@ import { FormControlLabel, TextField, Box } from '@material-ui/core';
 const theme = createMuiTheme({
     palette: {
         primary: {
-            main: '#1b5e20',
+            main: '#00b494',
           },
           secondary: {
             main: '#4caf50',

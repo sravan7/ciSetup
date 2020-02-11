@@ -11,7 +11,7 @@ function Dashboard(props){
             <Header />
             <div className="app-content">
                 <Menu />
-                <MailBox />
+                <MailBox type="inbox" user="sravan@email.com"/>
             </div>
         
         </div>

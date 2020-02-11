@@ -7,7 +7,7 @@ import {postLogin} from "./API"
 const theme = createMuiTheme({
     palette: {
         primary: {
-            main: '#1b5e20',
+            main: '#00b494',
           },
           secondary: {
             main: '#4caf50',

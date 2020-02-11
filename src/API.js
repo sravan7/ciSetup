@@ -32,4 +32,32 @@ export const postLogin = (inputData)=>{
         return {isError:true,value:"no user exists"}
     }
 }
-
+export const sortByDate = (mails)=>{
+    console.log( mails.sort((a,b)=>new Date(b.date)-new Date(a.date)))
+    return mails.sort((a,b)=>new Date(b.date)-new Date(a.date));
+}
+export const getMails=(mailType, user)=>{
+    let messagesDb = getDbData("messages");
+    console.log(messagesDb)
+    let toMailDb = getDbData("toMails");
+    let userMails=[];
+    if(mailType=="inbox"){
+        // let userMails=toMailDb.filter((data)=>data.toMail===user);
+        for  (let message of Object.values(messagesDb)){
+            console.log(message);
+            if(message.to.includes(user) || message.cc.includes(user)){
+                userMails.push(message)
+            }
+        }
+       
+    }
+    if(mailType=="sent"){
+        for  (let message of Object.values(messagesDb)){
+            if(message.fromMail.includes(user)){
+                userMails.push(message)
+            }
+        }
+    }
+    userMails = sortByDate(userMails);
+    return userMails;
+}
