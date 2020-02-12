@@ -14,13 +14,21 @@ const theme = createMuiTheme({
   });
 function MailCard(props){
     let {content} = props;
-    console.log(props, content);
+    const [checked, setCheckbox]=useState(false);
+    const handleChange = (e)=>{
+    if(e.stopPropagation)e.stopPropagation();
+    console.log(e.target.checked)
+    setCheckbox(!checked)
+  } 
+  
     return (
-    <li className="mail-item" id={props.content.unread.includes(props.user)&&props.type==="inbox"?"unreadMail":""} key={content.mid} onClick={()=>{props.handleReadPopup(props.content)}}>
-      <MuiThemeProvider theme={theme}>  <Checkbox className="mail-item-checkbox" checked={false} size="small" value={content.mid} color="primary" /> </MuiThemeProvider> 
+    <li className="mail-item" id={props.content.unread.includes(props.user)&&props.type==="inbox"?"unreadMail":""} key={content.mid} >
+      <MuiThemeProvider theme={theme}>  <Checkbox type="checkbox" className="mail-item-checkbox" name="delete" checked={checked} onChange={handleChange}  size="small" value={content.mid} color="primary" /> </MuiThemeProvider> 
+      <div className="mail-item-group" onClick={(e)=>{props.handleReadPopup(props.content);}}>
         <div className="mail-item-fname"> {content.fullName} </div>
         <div className="mail-item-subject"> {content.subject} </div>
         <div className="mail-item-date"> { new Date(content.date).toLocaleString()} </div>
+      </div>
      </li>  
     )
 }
