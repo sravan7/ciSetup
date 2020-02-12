@@ -2,16 +2,24 @@ import React, { useState } from 'react';
 import Checkbox from '@material-ui/core/Checkbox';
 import MailCard from "./MailCard";
 import {getMails} from "./API"
+import {updateReadList} from "./API"
 function MailBox(props){
-    const mails = getMails(props.type, props.user)
+    const [mails,setMails] = useState(getMails(props.type, props.user))
     const unread = [];
-    // const [mails,setMails] = useState([]); 
-    // // console.log(getMails(props.type, props.user))
-    // useEffect
-    // setMails(getMails(props.type, props.user));
+    const handleReadPopup = (data)=>{
+        if(data){
+            if(data.unread.includes(props.user)){
+                updateReadList(data.mid,props.user)
+                console.log("soudnot")
+                setMails(getMails(props.type, props.user))
+            }
+        }
+        props.handleReadPopup(data)
+    }
+
 
 return (
-    <div class="app-section"> 
+    <div className="app-section"> 
         <div className="mail-header"> 
                 <div className="mail-header-helper"> 
                     <div className="read-count">{props.type}({unread.length})</div>
@@ -38,7 +46,7 @@ return (
                     {
                         mails?
                         mails.map((mail)=>{
-                            return (<MailCard key={mail.mid} content={mail} />) 
+                            return (<MailCard key={mail.mid} user={props.user} type="inbox" content={mail} handleReadPopup={handleReadPopup} />) 
                         }):<div>ohoo this space is empty </div>
                     }
         </ul>

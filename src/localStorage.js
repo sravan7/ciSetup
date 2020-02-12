@@ -7,8 +7,8 @@ let UsersData = {
 let id1 =(Math.random()*8).toString(16).replace(".","") ;
 let id2 =(Math.random()*8).toString(16).replace(".","") ;
 let MessagesData = {
-    [id1]: { mid:id1 , date: new Date().toGMTString(), subject : "hello", body: "hi sravan from bala",fullName : "sravan", fromMail : "bala@email.com", to:["sravan@email.com","bala@email.com"],cc:[],},
-    [id2]: {mid: id2,date: new Date().toGMTString(), subject : "hi",body: "hi sravan, bala from sravan",fullName : "sravan", fromMail : "sravan@email.com", to:["sravan@email.com"],cc:[]},
+    [id1]: { mid:id1 , date: new Date().toGMTString(), subject : "hello", body: "hi sravan from bala",fullName : "sravan", fromMail : "bala@email.com", to:["sravan@email.com","bala@email.com"],cc:[],unread:["sravan@email.com","bala@email.com"]},
+    [id2]: {mid: id2,date: new Date().toGMTString(), subject : "hi",body: "hi sravan, bala from sravan",fullName : "sravan", fromMail : "sravan@email.com", to:["sravan@email.com"],cc:[], unread:["sravan@email.com","bala@email.com"]},
 }
 let ToData = [
     { mid: id1,toMail : "sravan@email.com"},

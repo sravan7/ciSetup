@@ -16,7 +16,7 @@ function MailCard(props){
     let {content} = props;
     console.log(props, content);
     return (
-    <li className="mail-item" key={props.key}>
+    <li className="mail-item" id={props.content.unread.includes(props.user)&&props.type==="inbox"?"unreadMail":""} key={content.mid} onClick={()=>{props.handleReadPopup(props.content)}}>
       <MuiThemeProvider theme={theme}>  <Checkbox className="mail-item-checkbox" checked={false} size="small" value={content.mid} color="primary" /> </MuiThemeProvider> 
         <div className="mail-item-fname"> {content.fullName} </div>
         <div className="mail-item-subject"> {content.subject} </div>

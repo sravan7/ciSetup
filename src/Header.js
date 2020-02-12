@@ -20,7 +20,7 @@ function Header(props){
             </div>
             <div className="inbox-count"> </div>
             <div className="notification"> </div>
-            <div className="app-logout"> </div>
+            <div className="app-logout" onClick={props.handleLogout}> </div>
 
 
         </div>

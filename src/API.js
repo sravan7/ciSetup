@@ -4,13 +4,17 @@ const getDbData = (type)=> {
     const dbData = JSON.parse(window.localStorage.getItem(type));
     return dbData;
 }
+const writeToDb= (type,data)=>{
+    window.localStorage.setItem(type, JSON.stringify(data))
+    return true;
+}
 
 const verifyUserEmailAndPassword = (email, password) => {
         let dbData = getDbData("users");
         if(Object.keys(dbData).includes(email)){
             let user = dbData[email];
             if(user.password===password){
-                return true;
+                return user;
             }
             else{
                 return false;
@@ -23,10 +27,10 @@ const verifyUserEmailAndPassword = (email, password) => {
 
 export const postLogin = (inputData)=>{
     const {email,password} = inputData;
-    const outputData = {};
-    if(verifyUserEmailAndPassword(email,password)){
+    const outputData = verifyUserEmailAndPassword(email,password);
+    if(outputData){
 
-            return {isError:false,value:email}
+            return {isError:false,value:outputData}
     }
     else {
         return {isError:true,value:"no user exists"}
@@ -60,4 +64,18 @@ export const getMails=(mailType, user)=>{
     }
     userMails = sortByDate(userMails);
     return userMails;
+}
+export const sendThisMail=(content)=>{
+    let db = getDbData("messages");
+    db[content["mid"]]=content;
+    console.log(db)
+    writeToDb("messages",db);
+    return true;
+}
+export const updateReadList=(mid, readBy)=>{
+let db = getDbData("messages")
+let unread = db[mid].unread;
+unread = unread.filter(val=>val!==readBy);
+db[mid].unread = unread;
+writeToDb("messages",db);
 }

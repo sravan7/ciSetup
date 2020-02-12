@@ -14,21 +14,10 @@ const theme = createMuiTheme({
           },
     },
   });
-const createDb= ()=>{
-    if(!window.indexedDB){
-        console.error("browser is not supported")
-    }
-    else {
-        createUsers();
-        createMessages()
-        createToBox();
-        console.log("all success")
-    }
-}
 
 function Login(props){
     const [error,setError] = useState({isError:false, value:""})
-    if(!window.localStorage.getItem("dataCreated")){
+    if(!window.localStorage.getItem("users")){
         createUsers();
         createMessages()
         createToBox();
