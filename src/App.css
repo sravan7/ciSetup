@@ -112,7 +112,7 @@
   width: 32px;
   height: 32px;
   color: green;
-  background-image: url('/menu-24px.svg');
+  background-image: url('%PUBLIC_URL%/menu-24px.svg');
   background-repeat: no-repeat;
   background-size: contain;
   cursor: pointer;
@@ -140,7 +140,7 @@
   width: 32px;
   height: 32px;
   color: green;
-  background-image: url('/mail-24px.svg');
+  background-image: url('%PUBLIC_URL%/mail-24px.svg');
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -156,7 +156,7 @@
   width: 32px;
   height: 32px;
   color: green;
-  background-image: url('/notifications-24px.svg');
+  background-image: url('%PUBLIC_URL%/notifications-24px.svg');
   background-repeat: no-repeat;
   background-size: contain;
   cursor: pointer;
@@ -165,7 +165,7 @@
   width: 32px;
   height: 32px;
   color: green;
-  background-image: url('/exit_to_app-24px.svg');
+  background-image: url('%PUBLIC_URL%/exit_to_app-24px.svg');
   background-repeat: no-repeat;
   background-size: contain;
   cursor: pointer;
@@ -446,7 +446,7 @@
 .to-accepted>img{
   width: 12px;
   height: 12px;
-  background-image: url('/close-24px.svg');
+  background-image: url('%PUBLIC_URL%/close-24px.svg');
   background-repeat: no-repeat;
   background-size: contain;
   cursor: pointer;

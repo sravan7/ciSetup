@@ -46,14 +46,14 @@ return (
                 </div>
                 <div className="mail-header-tools"> 
                     <div className="mail-header-tool-section mail-header-tool"> 
-                        <img src="/sync-24px.svg" className="mail-header-tool-refresh" /> 
-                        <img src="/remove_red_eye-24px.svg" className="mail-header-tool-eye" />
-                        <img src="/warning-24px.svg" className="mail-header-tool-warning" />
-                        <img src="/delete-24px.svg" className="mail-header-tool-delete" onClick={handleDelete} /> 
+                        <img src="%PUBLIC_URL%/sync-24px.svg" className="mail-header-tool-refresh" /> 
+                        <img src="%PUBLIC_URL%/remove_red_eye-24px.svg" className="mail-header-tool-eye" />
+                        <img src="%PUBLIC_URL%/warning-24px.svg" className="mail-header-tool-warning" />
+                        <img src="%PUBLIC_URL%/delete-24px.svg" className="mail-header-tool-delete" onClick={handleDelete} /> 
                      </div>
                     <div className="mail-header-tool-nav mail-header-tool"> 
-                        <img src="/arrow_back-24px.svg" className="mail-header-tool-back" /> 
-                        <img  src="/arrow_back-24px.svg" className="mail-header-tool-fwd"/> 
+                        <img src="%PUBLIC_URL%/arrow_back-24px.svg" className="mail-header-tool-back" /> 
+                        <img  src="%PUBLIC_URL%/arrow_back-24px.svg" className="mail-header-tool-fwd"/> 
                     </div>
                 </div>
 

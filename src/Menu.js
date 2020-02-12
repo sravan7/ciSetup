@@ -9,11 +9,11 @@ function Menu(props){
                 <div className="menu-folders">
                     Folders
                     <div className={props.mailboxType==="inbox"?"menu-inbox active":"menu-inbox"} onClick={()=>{props.handleMailboxType("inbox")}}> 
-                        <span className="inbox-text"><img src="/inbox-24px.svg" /> Inbox </span>
+                        <span className="inbox-text"><img src="%PUBLIC_URL%/inbox-24px.svg" /> Inbox </span>
                         <span className="menu-inbox-count">{props.inboxCount}</span> 
                     </div>
                     <div className={props.mailboxType==="sent"?"menu-inbox active":"menu-inbox"} onClick={()=>{props.handleMailboxType("sent")}} > 
-                        <span className="inbox-text"> <img src="/mail-24px.svg" /> Outbox</span>
+                        <span className="inbox-text"> <img src="%PUBLIC_URL%/mail-24px.svg" /> Outbox</span>
                         <span className="menu-inbox-count">{props.outboxCount}</span> 
                     </div>
                 </div>
