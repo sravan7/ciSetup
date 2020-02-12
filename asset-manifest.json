@@ -1,23 +1,31 @@
 {
   "files": {
-    "main.css": "/ciSetup/static/css/main.d7f23771.chunk.css",
-    "main.js": "/ciSetup/static/js/main.bccc9cb8.chunk.js",
-    "main.js.map": "/ciSetup/static/js/main.bccc9cb8.chunk.js.map",
+    "main.css": "/ciSetup/static/css/main.de10787c.chunk.css",
+    "main.js": "/ciSetup/static/js/main.66ff2691.chunk.js",
+    "main.js.map": "/ciSetup/static/js/main.66ff2691.chunk.js.map",
     "runtime-main.js": "/ciSetup/static/js/runtime-main.4c80139e.js",
     "runtime-main.js.map": "/ciSetup/static/js/runtime-main.4c80139e.js.map",
-    "static/js/2.f469ccbd.chunk.js": "/ciSetup/static/js/2.f469ccbd.chunk.js",
-    "static/js/2.f469ccbd.chunk.js.map": "/ciSetup/static/js/2.f469ccbd.chunk.js.map",
+    "static/js/2.a1880087.chunk.js": "/ciSetup/static/js/2.a1880087.chunk.js",
+    "static/js/2.a1880087.chunk.js.map": "/ciSetup/static/js/2.a1880087.chunk.js.map",
     "index.html": "/ciSetup/index.html",
-    "precache-manifest.97de2f10cf4effe3bc8276233ca1397f.js": "/ciSetup/precache-manifest.97de2f10cf4effe3bc8276233ca1397f.js",
+    "precache-manifest.c20e54bafdb09bb1248e1584dd007438.js": "/ciSetup/precache-manifest.c20e54bafdb09bb1248e1584dd007438.js",
     "service-worker.js": "/ciSetup/service-worker.js",
-    "static/css/main.d7f23771.chunk.css.map": "/ciSetup/static/css/main.d7f23771.chunk.css.map",
-    "static/js/2.f469ccbd.chunk.js.LICENSE.txt": "/ciSetup/static/js/2.f469ccbd.chunk.js.LICENSE.txt",
-    "static/media/logo.svg": "/ciSetup/static/media/logo.5d5d9eef.svg"
+    "static/css/main.de10787c.chunk.css.map": "/ciSetup/static/css/main.de10787c.chunk.css.map",
+    "static/js/2.a1880087.chunk.js.LICENSE.txt": "/ciSetup/static/js/2.a1880087.chunk.js.LICENSE.txt",
+    "static/media/arrow_back-24px.svg": "/ciSetup/static/media/arrow_back-24px.3bd6d7e4.svg",
+    "static/media/App.css": "/ciSetup/static/media/notifications-24px.6bfcb787.svg",
+    "static/media/delete-24px.svg": "/ciSetup/static/media/delete-24px.2fc9a828.svg",
+    "static/media/inbox-24px.svg": "/ciSetup/static/media/inbox-24px.fb020c42.svg",
+    "static/media/logo.svg": "/ciSetup/static/media/logo.5d5d9eef.svg",
+    "static/media/mail-24px.svg": "/ciSetup/static/media/mail-24px.b25e5056.svg",
+    "static/media/remove_red_eye-24px.svg": "/ciSetup/static/media/remove_red_eye-24px.e5b7cb1c.svg",
+    "static/media/sync-24px.svg": "/ciSetup/static/media/sync-24px.3485b63f.svg",
+    "static/media/warning-24px.svg": "/ciSetup/static/media/warning-24px.62d335b7.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.4c80139e.js",
-    "static/js/2.f469ccbd.chunk.js",
-    "static/css/main.d7f23771.chunk.css",
-    "static/js/main.bccc9cb8.chunk.js"
+    "static/js/2.a1880087.chunk.js",
+    "static/css/main.de10787c.chunk.css",
+    "static/js/main.66ff2691.chunk.js"
   ]
 }
