@@ -19,7 +19,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
   `npm start` command to start local development server
 
 ### npm test 
-  `npm test` commnad to test the Components and their corresponding test cases in [test folder inside src](../blob/master/src/__test__)
+  `npm test` commnad to test the Components and their corresponding test cases in [./src/__test__](https://github.com/sravan7/ciSetup/tree/master/src/__tests__)
 ### npm build
   `npm build ` command to build the App
 ### npm deplot

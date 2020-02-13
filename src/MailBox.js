@@ -46,14 +46,14 @@ return (
                 </div>
                 <div className="mail-header-tools"> 
                     <div className="mail-header-tool-section mail-header-tool"> 
-                        <img src={require("./img/sync-24px.svg")} className="mail-header-tool-refresh" /> 
-                        <img src={require("./img/remove_red_eye-24px.svg")} className="mail-header-tool-eye" />
-                        <img src={require("./img/warning-24px.svg")} className="mail-header-tool-warning" />
-                        <img src={require("./img/delete-24px.svg")} className="mail-header-tool-delete" onClick={handleDelete} /> 
+                        <img src={require("./img/sync-24px.svg")} alt={"sync icon"} className="mail-header-tool-refresh" /> 
+                        <img src={require("./img/remove_red_eye-24px.svg")} alt={"mark as read icon"} className="mail-header-tool-eye" />
+                        <img src={require("./img/warning-24px.svg")} alt={"warning icon"} className="mail-header-tool-warning" />
+                        <img src={require("./img/delete-24px.svg")} alt={"delete icon"} className="mail-header-tool-delete" onClick={handleDelete} /> 
                      </div>
                     <div className="mail-header-tool-nav mail-header-tool"> 
-                        <img src={require("./img/arrow_back-24px.svg")} className="mail-header-tool-back" /> 
-                        <img  src={require("./img/arrow_back-24px.svg")} className="mail-header-tool-fwd"/> 
+                        <img src={require("./img/arrow_back-24px.svg")} alt={"back arrow icon"} className="mail-header-tool-back" /> 
+                        <img  src={require("./img/arrow_back-24px.svg")} alt={"forward arrow icon"} className="mail-header-tool-fwd"/> 
                     </div>
                 </div>
 
