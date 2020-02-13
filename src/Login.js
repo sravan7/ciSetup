@@ -47,7 +47,7 @@ function Login(props){
                  <div className="login-header">Sign In</div>
                  {
                      formElements.map((value)=>{
-                      return  <Input id={"login-"+value}  required={true} type={value} name={value} autoFocus={value=="email"?true:false} label={value} color={"primary"} variant="outlined"  fullWidth={true} />   
+                      return  <Input id={"login-"+value} key={value}  required={true} type={value} name={value} autoFocus={value=="email"?true:false} label={value} color={"primary"} variant="outlined"  fullWidth={true} />   
                      })
                  }
                 {/* <Input  required={true} type="email" name="email" autoFocus={true} label="Email" color="primary" fullWidth={true} />
