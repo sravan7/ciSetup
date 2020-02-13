@@ -52,7 +52,7 @@ function Login(props){
                  }
                 {/* <Input  required={true} type="email" name="email" autoFocus={true} label="Email" color="primary" fullWidth={true} />
                 <Input required={true} type="password" name="password" label="Password" color="primary" fullWidth={true}  /> */}
-                <CustomButton variant="outlined" color="secondary" size="medium" variant="contained" fullWidth={true} type="submit" value="Sign In" className="custom-button" />
+                <CustomButton id="custom-button" variant="outlined" color="secondary" size="medium" variant="contained" fullWidth={true} type="submit" value="Sign In" className="custom-button" />
                   {error.isError?<div className="login-error"> {error.value} </div> : null }
                 </MuiThemeProvider>
            

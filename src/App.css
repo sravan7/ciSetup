@@ -124,7 +124,6 @@
   border: none;
   text-align: left;
   box-sizing: border-box;
-  border-bottom: 1px solid rgba(0, 0,0,0.5);
   cursor: pointer;
 }
 .app-search{
@@ -137,33 +136,38 @@
 .inbox-count{
   position: relative;
   cursor: pointer;
-  width: 32px;
-  height: 32px;
-  color: green;
+  width: 24px;
+  height: 24px;
   background-image: url('./img//mail-24px.svg');
   background-repeat: no-repeat;
   background-size: contain;
 }
 .inbox-count-num{
     position: absolute;
+    background-color: rgb(238, 155, 53);
     top: -10px;
     right: -3px;
-    color: rgba(0,180,148,1);
-    border-radius: 50px;
+    opacity: 1;
+    font-size: 14px;
+    color: white;
     padding: 0 2px 0 2px;
 }
 .notification{
-  width: 32px;
-  height: 32px;
+  width: 24px;
+  height: 24px;
   color: green;
+  position: relative;
   background-image: url('./img//notifications-24px.svg');
   background-repeat: no-repeat;
   background-size: contain;
   cursor: pointer;
 }
+.notification>span{
+  background: rgba(2,179,147,1);
+}
 .app-logout{
-  width: 32px;
-  height: 32px;
+  width: 24px;
+  height: 24px;
   color: green;
   background-image: url('./img/exit_to_app-24px.svg');
   background-repeat: no-repeat;
@@ -278,11 +282,12 @@
 
 /************************************************** app-section ***************************************/
 .app-section{
-  margin-top: 3%;
-  height: 95%;
-  border: 1px solid rgba(0, 0,0,0.05);
-  background-color: white;
-  width: 72%;
+    margin-top: 3%;
+    height: 95%;
+    box-shadow: 0 0 15px 0 rgb(243, 244, 244), 0 0 5px 0 rgba(0,0,0,0.1);
+    border: 1px solid rgba(0, 0, 0, 0.13);
+    background-color: #fff;
+    width: 72%;
 }
 .mail-header{
   width: 100%;
@@ -362,6 +367,16 @@
 .inbox-search{
   margin-right: 20px;
 }
+.inbox-search>input{
+  border: 1px solid rgba(180, 181, 182,1);
+}
+.inbox-search>button{
+  background-color: rgba(0,180,148,1);
+  outline: none;
+  cursor: pointer;
+  color: white;
+  border: none;
+}
 .mail-header-helper-tools{
   width: 100%;
   display: flex;
@@ -375,13 +390,14 @@
   margin-right: 20px;
 }
 .mail-header-tool>img{
-  width: 24px;
-  height: 24px;
-  border: 1px solid rgba(0,0,0,0.2);
-  box-shadow: 0 0 4px 0 rgba(0,0,0,0.5);
-  background-repeat: no-repeat;
-  background-size: contain;
-  cursor: pointer;
+    width: 24px;
+    height: 24px;
+    border: 1px solid rgba(0,0,0,0.2);
+    box-shadow: 0 0 1px 0 rgba(0,0,0,0.1);
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+    margin-left: 2px;
 }
 /* .mail-header-tool-refresh{
   background-image: url('/sync-24px.svg');

@@ -8,6 +8,7 @@ html,body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: rgba(95, 95, 95,1);
 }
 #root{
   height: 100%;

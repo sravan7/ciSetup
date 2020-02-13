@@ -19,7 +19,7 @@ function Header(props){
                 <input id="menuIcon" type="text" name="text" placeholder="Search"/>
             </div>
             <div className="inbox-count"> <span className="inbox-count-num"> {props.unreadCount} </span></div>
-            <div className="notification"> </div>
+            <div className="notification"><span className="inbox-count-num"> {12} </span> </div>
             <div className="app-logout" onClick={props.handleLogout}> </div>
 
 

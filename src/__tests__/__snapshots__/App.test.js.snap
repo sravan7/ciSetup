@@ -1,0 +1,159 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot test 1`] = `
+<div
+  className="App"
+>
+  <div
+    className="App-login"
+  >
+    <form
+      action="none"
+      onSubmit={[Function]}
+    >
+      <div
+        className="login-header"
+      >
+        Sign In
+      </div>
+      <div
+        className="loginControls"
+      >
+        <div
+          className="MuiFormControl-root-2 MuiTextField-root-1 MuiFormControl-fullWidth-5"
+        >
+          <label
+            className="MuiFormLabel-root-18 MuiInputLabel-root-6 MuiInputLabel-formControl-12 MuiInputLabel-animated-15 MuiInputLabel-outlined-17 Mui-required Mui-required"
+            data-shrink={false}
+            htmlFor="login-email"
+            id="login-email-label"
+          >
+            email
+            <span
+              className="MuiFormLabel-asterisk-25 MuiInputLabel-asterisk-11"
+            >
+               
+              *
+            </span>
+          </label>
+          <div
+            className="MuiInputBase-root-41 MuiOutlinedInput-root-26 MuiInputBase-fullWidth-51 MuiInputBase-formControl-42"
+            onClick={[Function]}
+          >
+            <input
+              aria-invalid={false}
+              autoFocus={true}
+              className="MuiInputBase-input-52 MuiOutlinedInput-input-36"
+              disabled={false}
+              id="login-email"
+              name="email"
+              onAnimationStart={[Function]}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              required={true}
+              type="email"
+            />
+            <fieldset
+              aria-hidden={true}
+              className="PrivateNotchedOutline-root-59 MuiOutlinedInput-notchedOutline-35"
+            >
+              <legend
+                className="PrivateNotchedOutline-legendLabelled-61"
+              >
+                <span>
+                  email
+                   *
+                </span>
+              </legend>
+            </fieldset>
+          </div>
+        </div>
+      </div>
+      <div
+        className="loginControls"
+      >
+        <div
+          className="MuiFormControl-root-64 MuiTextField-root-63 MuiFormControl-fullWidth-67"
+        >
+          <label
+            className="MuiFormLabel-root-80 MuiInputLabel-root-68 MuiInputLabel-formControl-74 MuiInputLabel-animated-77 MuiInputLabel-outlined-79 Mui-required Mui-required"
+            data-shrink={false}
+            htmlFor="login-password"
+            id="login-password-label"
+          >
+            password
+            <span
+              className="MuiFormLabel-asterisk-87 MuiInputLabel-asterisk-73"
+            >
+               
+              *
+            </span>
+          </label>
+          <div
+            className="MuiInputBase-root-103 MuiOutlinedInput-root-88 MuiInputBase-fullWidth-113 MuiInputBase-formControl-104"
+            onClick={[Function]}
+          >
+            <input
+              aria-invalid={false}
+              autoFocus={false}
+              className="MuiInputBase-input-114 MuiOutlinedInput-input-98"
+              disabled={false}
+              id="login-password"
+              name="password"
+              onAnimationStart={[Function]}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              required={true}
+              type="password"
+            />
+            <fieldset
+              aria-hidden={true}
+              className="PrivateNotchedOutline-root-121 MuiOutlinedInput-notchedOutline-97"
+            >
+              <legend
+                className="PrivateNotchedOutline-legendLabelled-123"
+              >
+                <span>
+                  password
+                   *
+                </span>
+              </legend>
+            </fieldset>
+          </div>
+        </div>
+      </div>
+      <div
+        className="loginControls"
+      >
+        <button
+          className="MuiButtonBase-root MuiButton-root MuiButton-contained custom-button MuiButton-containedSecondary MuiButton-fullWidth"
+          disabled={false}
+          id="cutom-button"
+          onBlur={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+          type="submit"
+          value="Sign In"
+        >
+          <span
+            className="MuiButton-label"
+          >
+            submit
+          </span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+`;

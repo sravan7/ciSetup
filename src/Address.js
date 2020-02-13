@@ -5,7 +5,7 @@ import React, { useState } from "react";
 function MailAddress(props) {
     const [text,setText] = useState();
     const handleKeys=(e)=>{
-        if(e.keyCode===13 || e.keyCode===188){
+        if(e.keyCode===13 || e.keyCode===188 ){
             console.log(e.target.value, e.target.value)
             let mail =e.target.value.replace(/\s|,/gi,"");
             if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail)){
