@@ -26,7 +26,7 @@ function MailAddress(props) {
             <div className="popup-to">
                 {
                     props.mails.map((val, index) => {
-                        return <span className="to-accepted">
+                        return <span key={key} className="to-accepted">
                             <span className="mail-text">{val}</span>
                             <img src="/close-24px.svg" className="removeIt" onClick={() => { props.handleRemove(props.type,val) }} />
                         </span>
