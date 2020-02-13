@@ -28,7 +28,7 @@ function MailAddress(props) {
                     props.mails.map((val, index) => {
                         return <span key={val} className="to-accepted">
                             <span className="mail-text">{val}</span>
-                            <img src="/close-24px.svg" alt={"close icon"} className="removeIt" onClick={() => { props.handleRemove(props.type,val) }} />
+                            <img src={require("./img/close-24px.svg")} alt={"close icon"} className="removeIt" onClick={() => { props.handleRemove(props.type,val) }} />
                         </span>
                     })
                 }
