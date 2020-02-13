@@ -67,7 +67,7 @@ function Overlay(props) {
                         </div>
                     </div>
                     <div className="popup-body" id="body-wrapper">
-                    <textarea id="popup-body" className="textarea-to" value={body} defaultValue=""> </textarea>
+                    <textarea id="popup-body" className="textarea-to" value={body} defaultValue={""} />
 
                     </div>
                     <div className="popup-handle">
