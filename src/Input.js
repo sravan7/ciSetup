@@ -16,13 +16,6 @@ const theme = createMuiTheme({
   });
 
 function Input({...props}){
-    // const primary = "#1b5e20"; // #F44336
-    // const secondary = "#4caf50"
-    console.log(props)
-    useEffect(()=>{
-        // const textField = new MDCTextField(document.querySelector('.mdc-text-field__input'));
-    },[])
-    // const textField = new MDCTextField()
     return (
         <div className="loginControls">
             <MuiThemeProvider theme={theme} >

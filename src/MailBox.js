@@ -40,7 +40,7 @@ return (
                 <div className="mail-header-helper"> 
                     <div className="read-count">{props.type}({mails.length})</div>
                     <div className="inbox-search">
-                        <input className="search-field" />
+                        <input className="search-field" placeholder={"search mails"} />
                         <button className="search-button">Search</button>
                     </div>
                 </div>

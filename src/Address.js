@@ -32,7 +32,7 @@ function MailAddress(props) {
                         </span>
                     })
                 }
-                <input id="to" className="textarea-to" onKeyUp={handleKeys} value={text} />
+                <input id="to" placeholder={`enter ${props.type} mail`} className="textarea-to" onKeyUp={handleKeys} value={text} />
             </div>
         </div>
     )

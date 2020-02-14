@@ -63,7 +63,7 @@ function Overlay(props) {
                     <div className="popup-to-wrapper" >
                         <div className="role-section">sub:</div>
                         <div className="popup-to">
-                            <input id="popup-subject" className="textarea-to" value={subject} />
+                            <input id="popup-subject" className="textarea-to" value={subject} placeholder={"enter subject"} />
                         </div>
                     </div>
                     <div className="popup-body" id="body-wrapper">
