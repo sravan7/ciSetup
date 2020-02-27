@@ -32,7 +32,7 @@ function Login(props){
                 })
             console.log(formData);
            const result = postLogin(formData);
-           if(result.isError==true){
+           if(result.isError===true){
                setError(result);
            }
            else {

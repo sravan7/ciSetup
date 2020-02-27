@@ -9,7 +9,6 @@ function Header(props){
         document.querySelector(".app-bar").classList.toggle("app-bar-shrink");
         document.querySelector(".extras-side-menu").classList.toggle("side-menu-push")
         document.querySelector(".app-content").classList.toggle("app-content-shrink")
-
     }
     return (
         <div className="app-bar">

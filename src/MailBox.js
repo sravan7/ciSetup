@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Checkbox from '@material-ui/core/Checkbox';
 import MailCard from "./MailCard";
 import {getMails,deleteMails,updateReadList} from "./API"
 function MailBox(props){
@@ -14,7 +13,6 @@ function MailBox(props){
         updateUnread()
         setType(props.type)
     }
-    const unread = [];
     const handleReadPopup = (data)=>{
         if(data){
             if(data.unread.includes(props.user)){
