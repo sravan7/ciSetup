@@ -14,10 +14,11 @@ function MailBox(props){
         setType(props.type)
     }
     const handleReadPopup = (data)=>{
+        console.log(data, props.user, data.unread.includes(props.user))
         if(data){
+
             if(data.unread.includes(props.user)){
                 updateReadList(data.mid,props.user)
-                console.log("soudnot")
                 setMails(getMails(props.type, props.user))
                 updateUnread()
             }

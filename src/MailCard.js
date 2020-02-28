@@ -24,7 +24,7 @@ function MailCard(props){
     return (
     <li className={props.content.unread.includes(props.user)&&props.type==="inbox"?"unreadMail mail-item ":"mail-item"} key={content.mid} >
       <MuiThemeProvider theme={theme}>  <Checkbox type="checkbox" className="mail-item-checkbox" name="delete" checked={checked} onChange={handleChange}  size="small" value={content.mid} color="primary" /> </MuiThemeProvider> 
-      <div className="mail-item-group" onClick={(e)=>{props.handleReadPopup(props.content);}}>
+      <div className="mail-item-group" onClick={(e)=>{console.log(props.content); props.handleReadPopup(props.content);}}>
         <div className="mail-item-fname"> {content.fullName} </div>
         <div className="mail-item-subject"> {content.subject} </div>
         <div className="mail-item-date"> { new Date(content.date).toLocaleString()} </div>

@@ -71,9 +71,9 @@ export const updateReadList = (mid, readBy) => {
     let db = getDbData("messages")
     let unread = db[mid].unread;
     unread = unread.filter(val => val !== readBy);
-    if (unread.length === 0) return false;
     db[mid].unread = unread;
     writeToDb("messages", db);
+    if (unread.length === 0) return false;    
     return true;
 }
 export const deleteMails = (deleteIds) => {
