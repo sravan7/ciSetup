@@ -315,7 +315,7 @@
   display: flex;
   width: 100%;
 }
-#unreadMail{
+.unreadMail{
   font-weight: 700;
 }
 .mail-item:hover{
@@ -471,6 +471,7 @@
     display: flex;
     align-items: center;
     border-bottom: 0.5px solid rgba(0, 0,0,0.4);
+    height: 10%;
 }
 .popup-to{
   display: flex;
@@ -491,7 +492,7 @@
 }
 
 #body-wrapper{
-  height: 62%;
+  height: 50%;
   margin-top: 0;
 }
 #popup-body{

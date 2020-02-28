@@ -8,11 +8,11 @@ function Menu(props){
                 <button className="mail-compose-button" onClick={props.handleCompose}> Compose Mail</button>
                 <div className="menu-folders">
                     Folders
-                    <div className={props.mailboxType==="inbox"?"menu-inbox active":"menu-inbox"} onClick={()=>{props.handleMailboxType("inbox")}}> 
+                    <div className={props.mailboxType==="inbox"?"menu-inbox active inbox":"menu-inbox inbox"} onClick={()=>{props.handleMailboxType("inbox")}}> 
                         <span className="inbox-text"><img src={require("./img/inbox-24px.svg")} alt={"inbox icon"} /> Inbox </span>
                         <span className="menu-inbox-count">{props.inboxCount}</span> 
                     </div>
-                    <div className={props.mailboxType==="sent"?"menu-inbox active":"menu-inbox"} onClick={()=>{props.handleMailboxType("sent")}} > 
+                    <div className={props.mailboxType==="sent"?"menu-inbox active sent":"menu-inbox sent"} onClick={()=>{props.handleMailboxType("sent")}} > 
                         <span className="inbox-text"> <img src={require("./img/mail-24px.svg")} alt={"sent message icon"} /> Outbox</span>
                         <span className="menu-inbox-count">{props.outboxCount}</span> 
                     </div>

@@ -15,8 +15,8 @@ function Overlay(props) {
     }
     const handleSend = ()=>{
         if(toMails.length){
-        let bodyContent = document.querySelector("#popup-body").value;
-        let subjectContent = document.querySelector("#popup-subject").value;
+        let bodyContent = body;
+        let subjectContent = subject;
         let mid =(Math.random()*8).toString(16).replace(".","") ;
         let mailContent ={ mid:mid, date: new Date().toGMTString(), subject : subjectContent, body: bodyContent,fullName : props.fullName, fromMail : props.user, to: toMails,cc:ccMails,unread:[...toMails,...ccMails]}
         console.log(mailContent)
@@ -46,6 +46,15 @@ function Overlay(props) {
             setCcMails([...ccMails, mail])
         }
     }
+    const handleChange = (e)=>{
+
+        if(e.target.id==="popup-body"){
+            setBody(e.target.value);
+        }
+        else if(e.target.id==="popup-subject"){
+            setSubject(e.target.value)
+        }
+    }
     return (
         <div className="app-overlay" onClick={handleClose}>
             <div className="overlay-content">
@@ -63,11 +72,11 @@ function Overlay(props) {
                     <div className="popup-to-wrapper" >
                         <div className="role-section">sub:</div>
                         <div className="popup-to">
-                            <input id="popup-subject" className="textarea-to" value={subject} placeholder={"enter subject"} />
+                            <input id="popup-subject" className="textarea-to" value={subject} onChange={(e)=>{handleChange(e)}} placeholder={"enter subject"} />
                         </div>
                     </div>
                     <div className="popup-body" id="body-wrapper">
-                    <textarea id="popup-body" className="textarea-to" value={body} defaultValue={""} />
+                    <textarea id="popup-body" className="textarea-to" onChange={(e)=>{handleChange(e)}} value={body} defaultValue={""} />
 
                     </div>
                     <div className="popup-handle">

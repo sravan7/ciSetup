@@ -20,7 +20,6 @@ function ReadOverlay(props) {
         <div className="app-overlay" onClick={handleClose}>
             <div className="overlay-content">
                 <div className="popup-box" onClick={(e) => { e.stopPropagation(); }}>
-                    <ReadAddress type="from"  mails={fromMail} />
                     <ReadAddress type="to" mails={toMails} />
                     <ReadAddress type="cc"   mails={ccMails} />
 

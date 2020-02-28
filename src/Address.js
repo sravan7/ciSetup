@@ -10,14 +10,12 @@ function MailAddress(props) {
             let mail =e.target.value.replace(/\s|,/gi,"");
             if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail)){
                 props.handleAccept(props.type,mail)
+                setText("")
             }
-            e.target.value=""
         }
-        else{
-            console.log(e.target.value)
-            // setText(e.target.value)
-        }
-        
+    }
+    const handleChange = (e)=>{
+        setText(e.target.value)
     }
     return (
         
@@ -32,7 +30,7 @@ function MailAddress(props) {
                         </span>
                     })
                 }
-                <input id="to" placeholder={`enter ${props.type} mail`} className="textarea-to" onKeyUp={handleKeys} value={text} />
+                <input id={props.type} placeholder={`enter ${props.type} mail`} className="textarea-to" onChange={handleChange} onKeyUp={handleKeys} value={text} />
             </div>
         </div>
     )
