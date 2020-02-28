@@ -20,9 +20,6 @@
     "e2e": "cd e2e && jest",
     "eject": "react-scripts eject"
   },
-  "jest":{
-    "preset": "jest-puppeteer"
-  },
   "eslintConfig": {
     "extends": "react-app"
   },
