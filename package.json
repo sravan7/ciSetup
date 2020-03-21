@@ -2,7 +2,7 @@
   "name": "myapp",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://sravan7.github.io/ciSetup",
+  "homepage": "https://sravan7.github.io/emailMockup",
   "dependencies": {
     "@material-ui/core": "^4.9.1",
     "@material/textfield": "^4.0.0",
